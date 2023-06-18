@@ -74,7 +74,7 @@ export class SubAccount {
 
   public static fromID(id: number): SubAccount {
     if (id < 0 || id > 255) {
-      throw "Subaccount ID must be >= 0 and <= 255";
+      throw new Error("Subaccount ID must be >= 0 and <= 255");
     }
 
     const bytes: Uint8Array = new Uint8Array(32).fill(0);

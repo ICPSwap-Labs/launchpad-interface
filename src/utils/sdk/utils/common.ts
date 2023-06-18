@@ -220,7 +220,7 @@ export function enumResultFormat<T>(result: any): StatusResult<T> {
         message = value;
       } else {
         if (typeof value === "object") {
-          message = `${messageKey}: ${JSON.stringify(value).replace(/\"/g, "")}`;
+          message = `${messageKey}: ${JSON.stringify(value).replace(/"/g, "")}`;
         } else {
           message = `${messageKey}: ${value}`;
         }

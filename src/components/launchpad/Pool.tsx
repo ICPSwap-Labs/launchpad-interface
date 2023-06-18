@@ -459,7 +459,7 @@ export default function LaunchpadPool({ pool: _pool, displayFinished, refreshLis
   const [openSuccessTip] = useSuccessTip();
   const [openErrorTip] = useErrorTip();
   const [reloadTrigger, setReloadTrigger] = useState(0);
-  const { result: poolDetail, loading: poolDetailLoading } = usePoolDetail(_pool.cid, reloadTrigger);
+  const { result: poolDetail } = usePoolDetail(_pool.cid, reloadTrigger);
 
   const [stakingModalShow, setStakingModalShow] = useState(false);
 
